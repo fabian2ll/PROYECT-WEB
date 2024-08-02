@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function loadBooks() {
-    fetch('http://localhost:8080/Concessionaire/rest/ManagementMotorcycle/getMotorcycles')
+    fetch('http://localhost:8080/Concessionaire/rest/ManagementUser/getUsers')
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById('content');
-            data.forEach(motorcycle => {
+            data.forEach(user => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
@@ -28,66 +28,51 @@ function loadBooks() {
 
                 const object = document.createElement('h2');
                 object.className = 'card-tittle';
-                object.textContent = ` ${"MOTORCYCLE"}`;
-                const brand = document.createElement('p');
-                brand.className = 'card-text';
-                brand.textContent = `Brand: ${motorcycle.brand}`;
+                object.textContent = ` ${"USER"}`;
+                const name = document.createElement('p');
+                name.className = 'card-text';
+                name.textContent = `Name: ${user.name}`;
 
                 /** Creamos la sección de Género **/
-                const cylinder = document.createElement('p');
-                cylinder.className = 'card-text';
-                cylinder.textContent = `Cylinder: ${motorcycle.cylinder}`;
+                const password = document.createElement('p');
+                password.className = 'card-text';
+                password.textContent = `Password: ${user.password}`;
 
                 /** Creamos la sección de la editorial **/
-                const plate = document.createElement('p');
-                plate.className = 'card-text';
-                plate.textContent = `Plate: ${motorcycle.plate}`;
+                
 
-                /** Sección de la cantidad de páginas del libro **/
-                const model = document.createElement('p');
-                model.className = 'card-text';
-                model.textContent = `Model: ${motorcycle.model}`;
-
-                /** Sección del año de publicación **/
-                const color = document.createElement('p');
-                color.className = 'card-text';
-                color.textContent = `Color: ${motorcycle.color}`;
-                const owner = document.createElement('p');
-                owner.className = 'card-text';
-                owner.textContent = `Owner: ${motorcycle.owner}`;
 
                 /* Creación de botones de eliminar */
             const btnEliminar = document.createElement('button');
             btnEliminar.className = 'btn-danger';
-            btnEliminar.id = `btn-delete-${motorcycle.plate}`;
+            btnEliminar.id = `btn-delete-${user.name}`;
             btnEliminar.textContent = `Eliminar`;
-            btnEliminar.setAttribute('data-plate', motorcycle.plate);
+            btnEliminar.setAttribute('data-plate', user.name);
 
             // Agregar event listener al botón
             btnEliminar.addEventListener('click', function() {
-                const bookCode = this.getAttribute('data-plate');
+                const bookCode = this.getAttribute('data-name');
                 deleteBookById(bookCode);
             });
 
             /* Creación del botón de actualizar */
             const btnActualizar = document.createElement('button');
             btnActualizar.className = 'btn-success margin';
-            btnActualizar.id = `btn-delete-${motorcycle.plate}`;
+            btnActualizar.id = `btn-delete-${user.name}`;
             btnActualizar.textContent = `Actualizar`;
 
             // Agregar event listener al botón
             btnActualizar.addEventListener('click', function() {
-                localStorage.setItem("motorcycleData", JSON.stringify(motorcycle));
-                window.location.href = "./updateMotorcycle.html";
+                localStorage.setItem("userData", JSON.stringify(user));
+                window.location.href = "updateUser.html";
             });
 
                 cardBody.appendChild(object);
-                cardBody.appendChild(brand);
-                cardBody.appendChild(cylinder);
-                cardBody.appendChild(plate);
-                cardBody.appendChild(model);
-                cardBody.appendChild(color);
-                cardBody.appendChild(owner);
+                
+                
+                cardBody.appendChild(name);
+                cardBody.appendChild(password);
+                
                  /* Agregamos el botón eliminar */
             cardBody.appendChild(btnEliminar);
 
@@ -112,7 +97,7 @@ function cleanContent(){
 }
 
 function deleteBookById(code){
-    let url = 'http://localhost:8080/Concessionaire/rest/ManagementMotorcycle/deleteMotorcycles?plate='+code;
+    let url = 'http://localhost:8080/Concessionaire/rest/ManagementUser/deleteUser?name='+code;
     fetch(url, {
         method: 'DELETE'
     })

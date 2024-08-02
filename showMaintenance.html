@@ -7,24 +7,33 @@
     <link rel="stylesheet" href="css/styleMaintenance.css">
 </head>
 <body>
-    <div class="side_bar">
-        <h4>Menu</h4>
-        <a class="nav-link active" id="button-books">Libros</a>
-        <a class="nav-link" id="button-borrow">Prestamo</a>
-    </div>
-    <div class="content" id="content">
-        
-        <div class="card">
-            <div class="card-body">
-            <a href="./addbook.html" class="btn btn-primary"><img src="resosurce/icons/marketing_strategy_finance_chart_laptop_management_business_icon_263043.png" alt=""></a>
-            <h3>Aqui puedes agregar libros</h3>
-
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="UserLogin.html">CONCESSIONAIRE</a>
             </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="ShowMotorcycles.html" >MOTOCICLETAS</a></li>
+                    <li><a href="showMaintenance.html" >MANTENIMIENTOS</a></li>
+                    <li><a href="showUser.html" >USUARIOS</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
     </div>
     
-        </div>
+    <div class="content" id="content">
+        
         
     </div>
+        
+    </div>
+
+    <a href="addMaintenance.html"><aside id="volver"><img src="" id="flecha">Agregar Mantenimiento </aside></a>
     <script src="js/scriptMaintenance.js"></script>
 </body>
 </html>

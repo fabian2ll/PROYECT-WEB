@@ -10,7 +10,7 @@ function validateUser(){
     .then(response => response.json())
     .then(response => {
         if(response){
-            window.location.href="userRegistrer.html";
+            window.location.href="showMotorcycles.html";
         }else{
             alert("El usuario no se encuentra registrado.");
         }

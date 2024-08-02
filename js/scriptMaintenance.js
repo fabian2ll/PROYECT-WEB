@@ -8,13 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById('button-books').addEventListener('click', function(event) {
-    alert('¡Botón clickeado!');
-});
-
-document.getElementById('button-borrow').addEventListener('click', function(event) {
-    alert('¡Botón clickeado!');
-});
 
 function loadBooks() {
     fetch('http://localhost:8080/Concessionaire/rest/ManagementMaintenance/getMaintenances')
@@ -34,8 +27,8 @@ function loadBooks() {
                 /** Creamos la sección de Autor **/
 
                 const object = document.createElement('h2');
-                object.className = 'card-text';
-                object.textContent = `Type: ${"Maintenance"}`;
+                object.className = 'card-tittle';
+                object.textContent = ` ${"MAINTENANCE"}`;
                 const plate = document.createElement('p');
                 plate.className = 'card-text';
                 plate.textContent = `Plate: ${maintenance.plate}`;

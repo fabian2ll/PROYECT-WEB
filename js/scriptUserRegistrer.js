@@ -8,27 +8,26 @@ function addUser(){
             password: passwordTwo 
         };
     
-    let url = 'http://localhost:8080/Concessionaire/rest/ManagementUser/createUser'; 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Ocurrió un error en la respuesta del servidor: ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        alert("Se agregó el registro.");
-        window.location.href = "./dashboard.html";
-    })
-    .catch(error => {
-        console.error('Ocurrió el siguiente error con la operación: ', error);
-    });
+        let url = 'http://localhost:8080/Concessionaire/rest/ManagementUser/createUser';
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Ocurrió un error en la respuesta del servidor: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert("Se agregó el registro.");
+            window.location.href = "showMotorcycles.html";
+        })
+        .catch(error => 
+            console.error('Ocurrió el siguiente error con la operación: ', error));
     
 } else{
     alert("Las constraseñas no son iguales, intente de nuevo")

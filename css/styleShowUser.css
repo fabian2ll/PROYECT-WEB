@@ -42,14 +42,14 @@ body{
 }
 .card{
     background-color:#343a40;
-    color: white;
+    color:white;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 10px;
     width: calc(30% - 20px);
-    height: 250px;
+    height: 200px;
     display: inline-block;
     vertical-align: top;
 
@@ -63,6 +63,7 @@ body{
     margin-bottom: 10px;
     color: #007bff;
     text-align: center;
+    padding: 5px;
 }
 .card-text{
     margin-bottom: 15px;
@@ -97,7 +98,7 @@ aside {
     position: fixed;
     top: 350px;
     right: 20px;
-    width: 100px;
+    width: 80px;
     height: 50px;
     padding: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -155,27 +156,28 @@ aside {
         cursor: pointer;
         display: none;
     }
-    .btn-success{
+     .btn-success{
+background-color: transparent;
+color: white;
+margin-left: 80px;
+padding: 5px;
+        font-size: 15px;
+    }
+    .btn-success:hover{
+        background-color: #007bff;
+        
+    }
+    .btn-danger{
+        margin-left: 30px;
         background-color: transparent;
-        color: white;
-        margin-left: 80px;
-        padding: 5px;
+    color: white;
+    padding: 5px;
         font-size: 15px;
-            }
-            .btn-success:hover{
-                background-color: #007bff;
-                
-            }
-            .btn-danger{
-                margin-left: 30px;
-                background-color: transparent;
-            color: white;
-            padding: 5px;
-        font-size: 15px;
-            }
-            .btn-danger:hover{
-                background-color: #007bff;
-            }
-            aside:hover{
-                background-color: #007bff;
-            }
+    }
+    .btn-danger:hover{
+        background-color: #007bff;
+    }
+    aside:hover{
+        background-color: #007bff;
+    }
+

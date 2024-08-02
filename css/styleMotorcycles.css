@@ -3,6 +3,7 @@ body{
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: rgb(38, 43, 59);
 }
 .side_bar{
     width: 12.5%;
@@ -32,16 +33,18 @@ body{
     color: #ffffff;
 }
 .content{
-    margin-left: 15%;
+    margin-top: 8%;
+    margin-left: 8%;
     padding: 20px;
     flex: 1;
     display: flex;
     flex-wrap: wrap;
 }
 .card{
-    background-color: #fff;
+    background-color:#343a40;
     border: 1px solid #ddd;
     border-radius: 4px;
+    color: white;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 10px;
@@ -58,6 +61,7 @@ body{
 .card-tittle{
     font-size: 1.25em;
     margin-bottom: 10px;
+    color: #007bff;
 }
 .card-text{
     margin-bottom: 15px;
@@ -88,3 +92,99 @@ body{
         height: 220px;
     }
 }
+aside {
+    position: fixed;
+    top: 350px;
+    right: 20px;
+    width: 80px;
+    height: 50px;
+    color: white;
+    padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; 
+    border-style:groove;
+    animation: moveUpDown 2s infinite;
+    z-index: 1; 
+    border-radius: 1dvh;
+    border-color: #1e2326
+}
+aside:hover{
+    background-color: #007bff;
+}
+    .contenedor-header{
+        background: #1e2326;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .contenedor-header{
+        background: #1e2326;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .contenedor-header header{
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    .contenedor-header header .logo a{
+        font-family: 'Righteous';
+        font-size: 25px;
+        color: #1c85b6;
+        text-decoration: none;
+    }
+    .contenedor-header header ul{
+        display: flex;
+        list-style: none;
+    }
+    .contenedor-header header nav ul li a{
+        text-align: none;
+        color: #fff;
+        margin: 0 15px;
+        padding: 3px;
+        transition: .5s;
+        text-decoration: none;
+    }
+    .contenedor-header header nav ul li a:hover{
+        color: #1CB698;
+    }
+    .nav-responsive{
+        background-color: #1CB698;
+        color:#fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+    }
+    .btn-success{
+        background-color: transparent;
+        color: white;
+        margin-left: 60px;
+        padding: 5px;
+        font-size: 15px;
+            }
+            .btn-success:hover{
+                background-color: #007bff;
+                
+            }
+            .btn-danger{
+                margin-left: 30px;
+                background-color: transparent;
+            color: white;
+            padding: 5px;
+        font-size: 15px;
+            }
+            .btn-danger:hover{
+                background-color: #007bff;
+            }
+
+    
