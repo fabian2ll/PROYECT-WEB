@@ -123,6 +123,26 @@ function deleteBookById(code){
         return response.json();
     })
     .then(data => {
+
+        let url = 'http://localhost:8080/Concessionaire/rest/ManagementMaintenance/deleteMaintenances?plate='+code;
+    fetch(url, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Ocurrió un error en la respuesta del servidor: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        
+        cleanContent();
+        loadBooks();
+    })
+    .catch(error => {
+        console.error('Ocurrió el siguiente error con la operación: ', error);
+    });
+
         alert("Se eliminó el registro");
         cleanContent();
         loadBooks();

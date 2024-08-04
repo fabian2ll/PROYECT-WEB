@@ -47,7 +47,7 @@ function loadBooks() {
             btnEliminar.className = 'btn-danger';
             btnEliminar.id = `btn-delete-${user.name}`;
             btnEliminar.textContent = `Eliminar`;
-            btnEliminar.setAttribute('data-plate', user.name);
+            btnEliminar.setAttribute('data-name', user.name);
 
             // Agregar event listener al botón
             btnEliminar.addEventListener('click', function() {
