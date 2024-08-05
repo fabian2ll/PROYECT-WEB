@@ -1,8 +1,95 @@
-.add-book{
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/736x/22/31/09/223109c96071bb64b41c5aeb98ee7bea.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-book {
     margin: 2% auto;
     width: 40%;
 }
-
-.card-title{
+.card-title {
     text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.card-body {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Increased shadow for depth */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-control {
+    width: calc(100% - 40px); /* Adjusted width to fit padding */
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1); /* Slight background for inputs */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    margin-bottom: 15px; /* Added space between inputs */
+    transition: background 0.3s, border 0.3s; /* Smooth transitions */
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2); /* Highlight on focus */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.registrer-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registrer-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.registrer-link p a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+.button{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+    
+}
+.button:hover{
+    background-color: rgb(39, 129, 212);
 }
